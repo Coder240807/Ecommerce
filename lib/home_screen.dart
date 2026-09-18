@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'banner.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -66,6 +68,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 20),
+              const PromoBanner(),
             ],
           ),
         ),
