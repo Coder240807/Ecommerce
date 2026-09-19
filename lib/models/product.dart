@@ -10,7 +10,6 @@ class Product {
   final String warrantyInformation;
   final String shippingInformation;
   final String availabilityStatus;
-  final List<String> images;
   final String thumbnail;
 
   Product({
@@ -25,7 +24,6 @@ class Product {
     required this.warrantyInformation,
     required this.shippingInformation,
     required this.availabilityStatus,
-    required this.images,
     required this.thumbnail,
   });
 }
