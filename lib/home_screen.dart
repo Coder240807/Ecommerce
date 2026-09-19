@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'banner.dart';
 
+import 'package:ecommerceapp/models/allproducts.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// 1. Import your home screen file here
 import 'home_screen.dart';
 
 void main() {
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // Hides the red debug corner banner
+      debugShowCheckedModeBanner: false,
       title: 'E-Commerce App',
       theme: ThemeData(useMaterial3: true, primarySwatch: Colors.blue),
       home: const HomeScreen(),
