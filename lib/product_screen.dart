@@ -14,6 +14,7 @@ class ProductDetailScreen extends StatefulWidget {
 }
 
 class _ProductDetailScreenState extends State<ProductDetailScreen> {
+  int _quantity = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -166,7 +167,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                           ? Colors.red.shade50
                           : widget.product.availabilityStatus == 'Low Stock'
                           ? Colors.orange.shade50
-                          : Colors.green.shade50, // Default to In Stock
+                          : Colors.green.shade50,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Text(
@@ -248,24 +249,81 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Price',
-                    style: GoogleFonts.poppins(
-                      fontSize: 14,
-                      color: Colors.grey.shade500,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  Text(
-                    '₹${widget.product.price}',
-                    style: GoogleFonts.poppins(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Price',
+                            style: GoogleFonts.poppins(
+                              fontSize: 14,
+                              color: Colors.grey.shade500,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Text(
+                            '₹${widget.product.price.toStringAsFixed(0)}',
+                            style: GoogleFonts.poppins(
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87,
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Row(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                if (_quantity > 1) {
+                                  setState(() {
+                                    _quantity--;
+                                  });
+                                }
+                              },
+                              icon: const Icon(Icons.remove_rounded, size: 20),
+                              color: Colors.black87,
+                            ),
+
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                              ),
+                              child: Text(
+                                _quantity.toString(),
+                                style: GoogleFonts.poppins(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black87,
+                                ),
+                              ),
+                            ),
+
+                            // Plus Button
+                            IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  _quantity++;
+                                });
+                              },
+                              icon: const Icon(Icons.add_rounded, size: 20),
+                              color: Colors.black87,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
 
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 20),
 
                   SizedBox(
                     width: double.infinity,
@@ -298,7 +356,6 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     ),
                   ),
 
-                  // Bottom padding cushion so the screen scrolls comfortably
                   const SizedBox(height: 32),
                 ],
               ),

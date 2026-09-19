@@ -10,7 +10,6 @@ class MainLayout extends StatefulWidget {
 
 class _MainLayoutState extends State<MainLayout> {
   int _currentIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     final List<Widget> screens = [
