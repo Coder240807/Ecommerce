@@ -15,10 +15,11 @@ class ProductDetailScreen extends StatefulWidget {
 
 class _ProductDetailScreenState extends State<ProductDetailScreen> {
   int _quantity = 1;
+  bool _isAdded = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const TopBar(),
+      appBar: TopBar(hasCartItems: _isAdded),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -329,9 +330,15 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     width: double.infinity,
                     height: 56,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          _isAdded = true;
+                        });
+                      },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple,
+                        backgroundColor: _isAdded
+                            ? Colors.green
+                            : Colors.deepPurple,
                         foregroundColor: Colors.white,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
@@ -341,10 +348,15 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Icon(Icons.shopping_bag_outlined, size: 22),
+                          Icon(
+                            _isAdded
+                                ? Icons.check_circle_outline_rounded
+                                : Icons.shopping_bag_outlined,
+                            size: 22,
+                          ),
                           const SizedBox(width: 10),
                           Text(
-                            'Add to Cart',
+                            _isAdded ? 'Successfully Added' : 'Add to Cart',
                             style: GoogleFonts.poppins(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,

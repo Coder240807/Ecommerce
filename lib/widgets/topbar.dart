@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
-  const TopBar({super.key});
+  final bool hasCartItems;
+
+  const TopBar({super.key, this.hasCartItems = false});
 
   @override
   Size get preferredSize => const Size.fromHeight(78);
@@ -25,7 +27,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
               ),
               child: TextField(
                 onChanged: (value) {},
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   enabledBorder: InputBorder.none,
                   focusedBorder: InputBorder.none,
                   hintText: "Search Product",
@@ -37,24 +39,42 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
             ),
-            InkWell(
-              onTap: () {},
-              borderRadius: BorderRadius.circular(50),
-              child: Container(
-                height: 54,
-                width: 54,
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade100,
-                  shape: BoxShape.circle,
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                InkWell(
+                  onTap: () {},
+                  borderRadius: BorderRadius.circular(50),
+                  child: Container(
+                    height: 54,
+                    width: 54,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade100,
+                      shape: BoxShape.circle,
+                    ),
+                    child: SvgPicture.asset("assets/icons/Cart.svg"),
+                  ),
                 ),
-                child: SvgPicture.asset("assets/icons/Cart.svg"),
-              ),
+                if (hasCartItems)
+                  Positioned(
+                    top: -2,
+                    right: -2,
+                    child: Container(
+                      width: 12,
+                      height: 12,
+                      decoration: const BoxDecoration(
+                        color: Colors.red,
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ),
+              ],
             ),
             InkWell(
               onTap: () {},
               borderRadius: BorderRadius.circular(50),
               child: Container(
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 height: 54,
                 width: 54,
                 decoration: BoxDecoration(
