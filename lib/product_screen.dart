@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerceapp/models/product.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ecommerceapp/widgets/wishlist_manager.dart';
 
 import 'widgets/topbar.dart';
 
@@ -16,6 +17,14 @@ class ProductDetailScreen extends StatefulWidget {
 class _ProductDetailScreenState extends State<ProductDetailScreen> {
   int _quantity = 1;
   bool _isAdded = false;
+  late bool _isLiked;
+
+  @override
+  void initState() {
+    super.initState();
+    _isLiked = WishlistManager().isProductLiked(widget.product);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,9 +68,18 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: IconButton(
-                        icon: const Icon(Icons.favorite_border),
-                        color: Colors.red,
-                        onPressed: () {},
+                        icon: Icon(
+                          _isLiked
+                              ? Icons.favorite_rounded
+                              : Icons.favorite_border_rounded,
+                        ),
+                        color: _isLiked ? Colors.red : Colors.grey[500],
+                        onPressed: () {
+                          setState(() {
+                            _isLiked = !_isLiked;
+                            WishlistManager().toggleProduct(widget.product);
+                          });
+                        },
                       ),
                     ),
                   ),

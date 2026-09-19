@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerceapp/home_screen.dart';
+import 'package:ecommerceapp/wishlist_screen.dart';
 
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});
@@ -10,20 +11,35 @@ class MainLayout extends StatefulWidget {
 
 class _MainLayoutState extends State<MainLayout> {
   int _currentIndex = 0;
+
+  late final List<Widget> _screens;
+
   @override
-  Widget build(BuildContext context) {
-    final List<Widget> screens = [
+  void initState() {
+    super.initState();
+    _screens = [
       Navigator(
+        key: const ValueKey('homeNav'),
         onGenerateRoute: (settings) {
           return MaterialPageRoute(builder: (context) => const HomeScreen());
         },
       ),
-      const Scaffold(body: Center(child: Text('Cart Screen'))),
+      Navigator(
+        key: const ValueKey('wishlistNav'),
+        onGenerateRoute: (settings) {
+          return MaterialPageRoute(
+            builder: (context) => const WishlistScreen(),
+          );
+        },
+      ),
       const Scaffold(body: Center(child: Text('Profile Screen'))),
     ];
+  }
 
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[_currentIndex],
+      body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) {
@@ -41,7 +57,8 @@ class _MainLayoutState extends State<MainLayout> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_rounded),
+            icon: Icon(Icons.favorite_outline_rounded),
+            activeIcon: Icon(Icons.favorite_rounded),
             label: 'Wishlist',
           ),
           BottomNavigationBarItem(
