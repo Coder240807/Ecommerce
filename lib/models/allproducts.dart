@@ -17,7 +17,7 @@ final List<Product> allProducts = [
       'https://picsum.photos/seed/headphones1/600/600',
       'https://picsum.photos/seed/headphones2/600/600',
     ],
-    thumbnail: 'https://picsum.photos/seed/headphones1/300/300',
+    thumbnail: 'https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D',
   ),
   Product(
     id: 2,
@@ -35,7 +35,7 @@ final List<Product> allProducts = [
       'https://picsum.photos/seed/watch1/600/600',
       'https://picsum.photos/seed/watch2/600/600',
     ],
-    thumbnail: 'https://picsum.photos/seed/watch1/300/300',
+    thumbnail: 'https://images.unsplash.com/photo-1617043786394-f977fa12eddf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c21hcnQlMjBmaXRuZXNzJTIwd2F0Y2h8ZW58MHx8MHx8fDA%3D',
   ),
   Product(
     id: 3,
@@ -53,7 +53,7 @@ final List<Product> allProducts = [
       'https://picsum.photos/seed/shirt1/600/600',
       'https://picsum.photos/seed/shirt2/600/600',
     ],
-    thumbnail: 'https://picsum.photos/seed/shirt1/300/300',
+    thumbnail: 'https://images.unsplash.com/photo-1740711152088-88a009e877bb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVuJ3MlMjBjb3R0b24lMjBjYXN1YWwlMjBzaGlydHxlbnwwfHwwfHx8MA%3D%3D',
   ),
   Product(
     id: 4,
@@ -71,7 +71,8 @@ final List<Product> allProducts = [
       'https://picsum.photos/seed/shoes1/600/600',
       'https://picsum.photos/seed/shoes2/600/600',
     ],
-    thumbnail: 'https://picsum.photos/seed/shoes1/300/300',
+    thumbnail:
+        'https://images.pexels.com/photos/24702077/pexels-photo-24702077.jpeg',
   ),
   Product(
     id: 5,
@@ -86,7 +87,7 @@ final List<Product> allProducts = [
     shippingInformation: 'Ships in 1-2 business days',
     availabilityStatus: 'In Stock',
     images: ['https://picsum.photos/seed/bottle1/600/600'],
-    thumbnail: 'https://picsum.photos/seed/bottle1/300/300',
+    thumbnail: 'https://images.unsplash.com/photo-1683383277379-644816d886e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3RlZWwlMjB3YXRlciUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D',
   ),
   Product(
     id: 6,
@@ -105,7 +106,8 @@ final List<Product> allProducts = [
       'https://picsum.photos/seed/chair1/600/600',
       'https://picsum.photos/seed/chair2/600/600',
     ],
-    thumbnail: 'https://picsum.photos/seed/chair1/300/300',
+    thumbnail:
+        'https://images.pexels.com/photos/31726674/pexels-photo-31726674.jpeg',
   ),
   Product(
     id: 7,
@@ -124,7 +126,8 @@ final List<Product> allProducts = [
       'https://picsum.photos/seed/speaker1/600/600',
       'https://picsum.photos/seed/speaker2/600/600',
     ],
-    thumbnail: 'https://picsum.photos/seed/speaker1/300/300',
+    thumbnail:
+        'https://images.pexels.com/photos/4917455/pexels-photo-4917455.jpeg',
   ),
   Product(
     id: 8,
@@ -142,7 +145,7 @@ final List<Product> allProducts = [
       'https://picsum.photos/seed/backpack1/600/600',
       'https://picsum.photos/seed/backpack2/600/600',
     ],
-    thumbnail: 'https://picsum.photos/seed/backpack1/300/300',
+    thumbnail: 'https://images.unsplash.com/photo-1509762774605-f07235a08f1f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYmFja3BhY2slMjBwaG90b3N8ZW58MHx8MHx8fDA%3D',
   ),
   Product(
     id: 9,
@@ -158,7 +161,8 @@ final List<Product> allProducts = [
     shippingInformation: 'Ships in 1-2 business days',
     availabilityStatus: 'In Stock',
     images: ['https://picsum.photos/seed/yogamat1/600/600'],
-    thumbnail: 'https://picsum.photos/seed/yogamat1/300/300',
+    thumbnail:
+        'https://images.pexels.com/photos/6339731/pexels-photo-6339731.jpeg',
   ),
   Product(
     id: 10,
@@ -176,6 +180,6 @@ final List<Product> allProducts = [
       'https://picsum.photos/seed/cookware1/600/600',
       'https://picsum.photos/seed/cookware2/600/600',
     ],
-    thumbnail: 'https://picsum.photos/seed/cookware1/300/300',
+    thumbnail: 'https://images.unsplash.com/photo-1592156553722-a2335059951a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bm9uJTIwc3RpY2slMjBjb29rd2FyZSUyMHNldHxlbnwwfHwwfHx8MA%3D%3D',
   ),
 ];

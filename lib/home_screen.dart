@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'banner.dart';
 
 import 'package:ecommerceapp/models/allproducts.dart';
+import 'package:ecommerceapp/widgets/productcard.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -72,7 +73,30 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const PromoBanner(),
+            Expanded(
+              child: CustomScrollView(
+                slivers: [
+                  const SliverToBoxAdapter(child: PromoBanner()),
+                  SliverPadding(
+                    padding: const EdgeInsets.all(8),
+                    sliver: SliverGrid(
+                      delegate: SliverChildBuilderDelegate(
+                        (context, index) =>
+                            ProductCard(product: allProducts[index]),
+                        childCount: allProducts.length,
+                      ),
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 0.7,
+                            crossAxisSpacing: 8,
+                            mainAxisSpacing: 8,
+                          ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
