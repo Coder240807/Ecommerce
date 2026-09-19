@@ -175,7 +175,7 @@ final List<Product> allProducts = [
     brand: 'ChefMate',
     warrantyInformation: '1 year warranty',
     shippingInformation: 'Ships in 3-4 business days',
-    availabilityStatus: 'Out of Stock',
+    availabilityStatus: 'Low Stock',
     images: [
       'https://picsum.photos/seed/cookware1/600/600',
       'https://picsum.photos/seed/cookware2/600/600',

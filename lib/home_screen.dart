@@ -1,8 +1,8 @@
-import 'package:ecommerceapp/topbar.dart';
+import 'package:ecommerceapp/widgets/topbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'banner.dart';
+import 'widgets/banner.dart';
 
 import 'package:ecommerceapp/models/allproducts.dart';
 import 'package:ecommerceapp/widgets/productcard.dart';
