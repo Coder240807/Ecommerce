@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ecommerceapp/models/cart.dart';
 import 'package:ecommerceapp/widgets/wishlist_manager.dart';
 
-import 'widgets/topbar.dart';
+import '../widgets/topbar.dart';
 
 class ProductDetailScreen extends StatefulWidget {
   final Product product;

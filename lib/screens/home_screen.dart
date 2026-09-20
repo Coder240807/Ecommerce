@@ -1,7 +1,7 @@
 import 'package:ecommerceapp/widgets/topbar.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/banner.dart';
+import '../widgets/banner.dart';
 
 import 'package:ecommerceapp/models/allproducts.dart';
 import 'package:ecommerceapp/widgets/productcard.dart';

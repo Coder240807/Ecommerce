@@ -1,8 +1,7 @@
-import 'package:ecommerceapp/cart_screen.dart';
+import 'package:ecommerceapp/screens/cart_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerceapp/home_screen.dart';
-import 'package:ecommerceapp/wishlist_screen.dart';
-import 'package:ecommerceapp/wishlist_screen.dart';
+import 'package:ecommerceapp/screens/home_screen.dart';
+import 'package:ecommerceapp/screens/wishlist_screen.dart';
 
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});

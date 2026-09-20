@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ecommerceapp/cart_screen.dart';
+import 'package:ecommerceapp/screens/cart_screen.dart';
 
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
   final bool hasCartItems;
