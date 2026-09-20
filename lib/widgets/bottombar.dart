@@ -2,6 +2,7 @@ import 'package:ecommerceapp/screens/cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerceapp/screens/home_screen.dart';
 import 'package:ecommerceapp/screens/wishlist_screen.dart';
+import 'package:ecommerceapp/screens/profile_screen.dart';
 
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});
@@ -24,12 +25,16 @@ class _MainLayoutState extends State<MainLayout> {
       onGenerateRoute: (settings) =>
           MaterialPageRoute(builder: (context) => const WishlistScreen()),
     ),
-    Navigator(
+    /*Navigator(
       key: const ValueKey('cartNav'),
       onGenerateRoute: (settings) =>
           MaterialPageRoute(builder: (context) => const CartScreen()),
+    ),*/
+    Navigator(
+      key: const ValueKey('profileNav'),
+      onGenerateRoute: (settings) =>
+          MaterialPageRoute(builder: (context) => const ProfileScreen()),
     ),
-    const Scaffold(body: Center(child: Text('Profile Screen'))),
   ];
 
   @override

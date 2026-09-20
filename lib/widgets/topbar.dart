@@ -46,7 +46,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
                 InkWell(
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => const CartScreen()),
+                    MaterialPageRoute(builder: (context) => const CartScreen()),
                   ),
                   borderRadius: BorderRadius.circular(50),
                   child: Container(
