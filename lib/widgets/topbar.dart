@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ecommerceapp/cart_screen.dart';
 
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
   final bool hasCartItems;
@@ -43,7 +44,10 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
               clipBehavior: Clip.none,
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const CartScreen()),
+                  ),
                   borderRadius: BorderRadius.circular(50),
                   child: Container(
                     height: 54,

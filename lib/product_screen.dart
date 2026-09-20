@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerceapp/models/product.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ecommerceapp/models/cart.dart';
 import 'package:ecommerceapp/widgets/wishlist_manager.dart';
 
 import 'widgets/topbar.dart';
@@ -349,6 +350,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     height: 56,
                     child: ElevatedButton(
                       onPressed: () {
+                        cart.add(widget.product, quantity: _quantity);
                         setState(() {
                           _isAdded = true;
                         });
