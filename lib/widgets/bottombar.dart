@@ -25,11 +25,6 @@ class _MainLayoutState extends State<MainLayout> {
       onGenerateRoute: (settings) =>
           MaterialPageRoute(builder: (context) => const WishlistScreen()),
     ),
-    /*Navigator(
-      key: const ValueKey('cartNav'),
-      onGenerateRoute: (settings) =>
-          MaterialPageRoute(builder: (context) => const CartScreen()),
-    ),*/
     Navigator(
       key: const ValueKey('profileNav'),
       onGenerateRoute: (settings) =>

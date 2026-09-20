@@ -254,9 +254,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                       icon: Icons.verified_user_outlined,
                       iconColor: Colors.blueGrey,
                       label: 'Warranty',
-                      value: widget
-                          .product
-                          .warrantyInformation, // Replace with your variable
+                      value: widget.product.warrantyInformation,
                     ),
                   ],
                 ),
