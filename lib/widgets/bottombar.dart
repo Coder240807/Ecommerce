@@ -14,35 +14,24 @@ class MainLayout extends StatefulWidget {
 class _MainLayoutState extends State<MainLayout> {
   int _currentIndex = 0;
 
-  late final List<Widget> _screens;
-
-  @override
-  void initState() {
-    super.initState();
-    _screens = [
-      Navigator(
-        key: const ValueKey('homeNav'),
-        onGenerateRoute: (settings) {
-          return MaterialPageRoute(builder: (context) => const HomeScreen());
-        },
-      ),
-      Navigator(
-        key: const ValueKey('wishlistNav'),
-        onGenerateRoute: (settings) {
-          return MaterialPageRoute(
-            builder: (context) => const WishlistScreen(),
-          );
-        },
-      ),
-      Navigator(
-        key: const ValueKey('cartNav'),
-        onGenerateRoute: (settings) {
-          return MaterialPageRoute(builder: (context) => const CartScreen());
-        },
-      ),
-      const Scaffold(body: Center(child: Text('Profile Screen'))),
-    ];
-  }
+  final List<Widget> _screens = [
+    Navigator(
+      key: const ValueKey('homeNav'),
+      onGenerateRoute: (settings) =>
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
+    ),
+    Navigator(
+      key: const ValueKey('wishlistNav'),
+      onGenerateRoute: (settings) =>
+          MaterialPageRoute(builder: (context) => const WishlistScreen()),
+    ),
+    Navigator(
+      key: const ValueKey('cartNav'),
+      onGenerateRoute: (settings) =>
+          MaterialPageRoute(builder: (context) => const CartScreen()),
+    ),
+    const Scaffold(body: Center(child: Text('Profile Screen'))),
+  ];
 
   @override
   Widget build(BuildContext context) {
