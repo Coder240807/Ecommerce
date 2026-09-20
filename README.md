@@ -134,7 +134,3 @@ Change `AppColors.primary` to re-colour the whole app.
 - [ ] User login and profile editing
 - [ ] Checkout and order history
 - [ ] Category filters and sorting
-
-## Screenshots
-
-_Add screenshots of the home, product, cart and profile screens here._
